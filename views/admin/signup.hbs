@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up / project 2</title>
+</head>
+<body>
+    <h1>Signup Page</h1>
+    <form action='/admin/signup' method="POST">
+    <label for='username'>Username</label>
+    <input it='username' type="text" name='username' placefolder='your username'>
+    <label for='password'>Password</label>
+    <input id='pasword' type='password' name='password' placefolder='your password'>
+    <input type='submit' value='sign-up'>
+    </form>
+
+    {{#if message}}
+    <div>{{message}}</div>
+    {{/if}}
+
+    <p>
+      <a href="/admin/login">Login</a>  
+    </p>
+
+</body>
+</html>

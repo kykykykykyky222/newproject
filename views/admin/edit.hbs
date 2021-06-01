@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit / project 2</title>
+</head>
+<body>
+    <p>edit</p>
+    "{{data}}"
+     <form action="/admin/edit/{{data._id}}" method="POST">
+    <label>Name</label>
+    <input type="text" name="name" value="{{data.name}}">
+    <label>Address</label>
+    <input type="text" name="address1" value="{{data.address1}}">
+    <label>Address postalcode</label>
+    <input type="text" name="address2" value="{{data.address2}}">
+     <label>Latitude</label>
+    <input name="latitude" value="{{data.latitude}}">
+    <label>Longitude</label>
+    <input name="longitude" value="{{data.longitude}}">
+    <label>Opening day</label>
+    <input type="date" name="openingday" value="{{data.modified_openingday}}">
+    <label>Closing day</label>
+    <input type="date" name="closingday" value="{{data.modified_closingday}}">
+    <label>Rescheduled Opening day</label>
+    <input type="date" name="rescheduledOpnday" value="{{data.modified_rescheduled_openingday}}">
+    <label>Rescheduled Closing day</label>
+    <input type="date" name="rescheduledClsday" value="{{data.modified_rescheduled_closingday}}">
+     <label>Web-Site</label>
+    <input type="text" name="website" value="{{data.website}}">
+     <label>Ticket</label>
+    <input type="text" name="ticket" value="{{data.ticket}}">
+     <label>Image</label>
+       <input type="text" name="image" value="{{data.image}}">
+     <label>Image CopyRight</label>
+       <input type="text" name="image_copyright" value="{{data.image_copyright}}">
+    <label>is rescheduled</label>
+    {{#if data.is_rescheduled}}
+    <input type="checkbox" name="is_rescheduled" checked>
+    {{else}}
+    <input type="checkbox" name="is_rescheduled">
+    {{/if}}
+     <label>Event Type / {{data.type_of_event}}</label>
+    <select name="type_of_event">
+        <option value="exhibition">Exhibition</option>
+        <option value="biennale">Biennale</option>
+        <option value="art fair">Art Fair</option>
+        <option value="event">Event</option>
+        <option value="other">other type of event</option>
+    </select>
+     <label>Country / checked {{data.country}}</label>
+    <select name="country">
+        <option value="germany">Germany</option>
+        <option value="switzerland">Switzerland</option>
+        <option value="united_kingdom">United Kingdom</option>
+        <option value="italy">Italy</option>
+        <option value="france">France</option>
+        <option value="spain">Spain</option>
+        <option value="belgium">Belgium</option>
+        <option value="netherlands">Netherlands</option>
+        <option value="greece">Greece</option>
+        <option value="turkey">Turkey</option>
+        <option value="other">Other countries</option>
+    </select>
+    <textarea name="seo_text" maxlength="200">   
+    </textarea>
+    
+    <input type="submit" value="post">
+    </form>
+    
+</body>
+</html>

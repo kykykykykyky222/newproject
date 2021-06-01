@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this is text for SEO about the search page.">
+    <title>search / project 2</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header>
+    <nav>
+        <li><a href="/schedule">schedule</a></li>
+        <li><a href="/map">map</a></li>
+        <li><a href="/search">search</a></li>
+    </nav>
+    </header>
+     <p><a href="/"><span>top</span></a> > search </p>
+    <div>
+        <p>search</p>
+        <form action="/search/result" method="GET">
+        <input type="text" name="search" >
+        <input type="submit" value="search">
+        </form>
+    </div>
+    <div>
+        <p>advance search</p>
+      <form action="/search/advance_search_result/" method="GET">
+          <select name="country">
+                  <option value="germany">Germany</option>
+                  <option value="switzerland">Switzerland</option>
+                  <option　value="united_kingdom">United Kingdom</option>
+                  <option value="italy">Italy</option>
+                  <option value="france">France</option>
+                  <option value="spain">Spain</option>
+                  <option value="belgium">Belgium</option>
+                  <option value="netherlands">Netherlands</option>
+                  <option value="greece">Greece</option>
+                  <option value="turkey">Turkey</option>
+                 <option value="other">Other countries</option>
+                 <option value="">no select</option>
+          </select>
+      <select name="type_of_event">
+        <option value="exhibition">Exhibition</option>
+        <option value="biennale">Biennale</option>
+        <option value="art fair">Art Fair</option>
+        <option value="event">Event</option>
+        <option value="other">other type of event</option>
+        <option value="">no select</option>
+         </select>
+         <select name="year">
+             <option value="2021">2021</option>
+             <option value="2020">2020</option>
+             <option value="2022">2022</option>
+             <option value="2023">2023</option>
+         </select>
+      <input type="submit" value="search">
+      </form>
+      </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="this is text for SEO about the advance search result page.">
+
+    <title>advance search result / project 2</title>
+     <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header>
+    <nav>
+        <li><a href="/schedule">schedule</a></li>
+        <li><a href="/map">map</a></li>
+        <li><a href="/search">search</a></li>
+    </nav>
+    </header>
+     <p><a href="/"><span>top</span></a> > <a href="/search">search</a> > <span>advance search result</span> </p>
+    <p> {{itemNumberInPage.min}} - {{itemNumberInPage.max}}      /{{total}} events</p>
+    {{#each data}}
+    <a href="/schedule/detail/{{this._id}}"><h2>{{this.name}}</h2></a>
+    <p>{{this.modified_rescheduled_openingday}} - {{this.modified_rescheduled_closingday}}</p>
+    {{/each}}
+
+    <div>
+        <ul>
+            {{#each pageForCss}}
+             {{#if this.current_page}}
+            <li><p>{{this.number}}</p></li>
+            {{else}}
+           <li><p><a href="/search/advance_search_result/?country={{this.country}}&type_of_event={{this.type_of_event}}&year={{this.year}}&page={{this.number}}&limit=15">{{this.number}}</a></p></li>
+           {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+
+    
+</body>
+</html>

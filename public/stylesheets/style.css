@@ -1,0 +1,34 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+.postponed {
+  color: red;
+}
+
+.list_postponed::after {
+  content: "POSTPONED";
+  color: red;
+}
+
+#mapid {
+  height: 400px;
+}
+
+.postponed_note1::after {
+  content: " POSTPONED";
+  color: red;
+  clear: both;
+}
+.postponed_note2 {
+  text-decoration: line-through;
+}
+.postponed_note3 {
+  color: red;
+  font-weight: bold;
+}

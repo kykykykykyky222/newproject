@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this is text for SEO about the result page.">
+    <title>result / project 2</title>
+</head>
+<body>
+     <header>
+    <nav>
+        <li><a href="/schedule">schedule</a></li>
+        <li><a href="/map">map</a></li>
+        <li><a href="/search">search</a></li>
+    </nav>
+    </header>
+     <p><a href="/"><span>top</span></a> > <a href="/search">search</a> > <span>search result</span> </p>
+    <p>result</p>
+    {{#each data}}
+    <a href="/schedule/detail/{{this._id}}"><h2>{{this.name}}</h2></a>
+    {{/each}}
+</body>
+</html>

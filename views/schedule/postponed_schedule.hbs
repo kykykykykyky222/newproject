@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this is text for SEO about the postponed schedule page">
+    <title>postponed events / project 2</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+     <header>
+    <nav>
+        <li><a href="/schedule">schedule</a></li>
+        <li><a href="/map">map</a></li>
+        <li><a href="/search">search</a></li>
+    </nav>
+    </header>
+
+    <p><a href="/"><span>top</span></a> > <a href="/schedule">schedule</a> > <span> postponed events</span> </p>
+    <p>{{itemNumberInPage.min}} - {{itemNumberInPage.max}} events / total : {{total}} events</p>
+    {{#each data}}
+   
+    <h2 class="postponed_note1"><a href="/schedule/detail/{{this._id}}">{{this.name}}</a></h2>
+    <p>{{this.modified_rescheduled_openingday}} - {{this.modified_rescheduled_closingday}}  <span class="postponed_note2">{{modified_openingday}} - {{modified_closingday}}</span></p>
+    <p>{{this.address1}}  /   {{this.address2}}</p>
+    <p>{{this.type_of_event}}</p>
+   
+    {{/each}}
+    
+    <div>
+        <ul>
+    {{#each pageForCss}}
+    {{#if this.current_page}}
+   <li><p>{{this.number}}</p></li>
+    {{else}}
+    <li><p><a href="/schedule/?page={{this.number}}&limit=15">{{this.number}}</a></p></li>
+    {{/if}}
+    {{/each}}
+        </ul>
+    </div>
+
+    <script src="/javascripts/main.js"></script>
+</body>
+</html>
